@@ -16,14 +16,14 @@ class CafeForm(FlaskForm):
     location = URLField('Cafe Location on Google Maps (URL)', validators=[DataRequired()])
     opening = StringField('Opening Time e.g. 8:00AM', validators=[DataRequired()])
     closing = StringField('Closing Time e.g. 5:30PM', validators=[DataRequired()])
-    coffee = SelectField('Coffee Rating',
-                         choices=['☕️', '☕☕', '☕☕☕', '☕☕☕☕', '☕☕☕☕☕'],
-                         validators=[DataRequired()])
-    wifi = SelectField('Wifi Strength Rating',
-                       choices=['✘', '💪', '💪💪', '💪💪💪', '💪💪💪💪', '💪💪💪💪💪'],
-                       validators=[DataRequired()])
-    power = SelectField('Power Socket Availability',
-                        choices=['🔌', '🔌🔌', '🔌🔌🔌', '🔌🔌🔌🔌', '🔌🔌🔌🔌🔌'],
+    dessert = SelectField('Dessert Rating',
+                          choices=['🍧', '🍧🍧', '🍧🍧🍧', '🍧🍧🍧🍧', '🍧🍧🍧🍧🍧'],
+                          validators=[DataRequired()])
+    ambience = SelectField('Ambience Rating',
+                           choices=['👍', '👍👍', '👍👍👍', '👍👍👍👍👍', '👍👍👍👍👍'],
+                           validators=[DataRequired()])
+    seats = SelectField('Seats Availability',
+                        choices=['🪑', '🪑🪑', '🪑🪑🪑', '🪑🪑🪑🪑', '🪑🪑🪑🪑🪑'],
                         validators=[DataRequired()])
     submit = SubmitField('Submit')
 
